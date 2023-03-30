@@ -1,103 +1,17 @@
 # Team_profile_generator
 
-# Your Task
-Your task is to take the given starter code and convert it into a working Node.js command-line application. This application will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. You have been provided with tests, so make sure every part of your code passes each provided test.
+This application generates a webpage that displays basic information about team members in a software engineering team. The webpage includes the names, employee IDs, email addresses, and GitHub profiles (for engineers) or school names (for interns) for each team member.
 
-User Story
-As a manager a user want to generate a webpage that displays my team's basic info so that a user have quick access to their emails and GitHub profiles.
+# Functionality
 
-Instructions
+This Node.js command-line application accepts user input and creates objects for each team member using the correct classes as blueprints. It prompts the user to enter the team manager's name, employee ID, email address, and office number. Then, the user is presented with a menu with the option to add an engineer or an intern, or to finish building the team. If the user selects the engineer option, they are prompted to enter the engineer's name, ID, email, and GitHub username. If the user selects the intern option, they are prompted to enter the intern's name, ID, email, and school name. Once the user finishes building the team, the HTML is generated and saved to a file named team.html in the output folder.
 
-Create a command-line application that accepts accepts user input using the provided starter code.
+# Usage
 
-Create classes for each team member provided and export them. The tests for these classes (in the _tests_ directory) must ALL pass.
+To use this application, clone the repository onto your local machine. In the terminal, navigate to the root directory of the application and run the command node index.js. Follow the prompts to enter information about your team members. Once you have finished building the team, the team.html file will be generated in the output folder.
 
-The first class is an Employee parent class with the following properties and methods:
+# License
 
-name
-id
-email
-getName()
-getId()
-getEmail()
+This application is licensed under the MIT License.
 
-getRole()—returns 'Employee'
-
-
-
-The other three classes will extend Employee.
-In addition to Employee's properties and methods, Manager will also have the following:
-
-officeNumber
-
-getRole()—overridden to return 'Manager'
-
-
-
-In addition to Employee's properties and methods, Engineer will also have the following:
-
-
-github—GitHub username
-getGithub()
-
-getRole()—overridden to return 'Engineer'
-
-
-
-In addition to Employee's properties and methods, Intern will also have the following:
-
-school
-getSchool()
-
-getRole()—overridden to return 'Intern'
-
-
-
-Finally, although it’s not a requirement, consider adding validation to ensure that user input is in the proper format.
-
-
-Write code in index.js that uses inquirer to gather information about the development team members and creates objects for each team member using the correct classes as blueprints.
-
-When a user starts the application then they are prompted to enter the team manager’s:
-
-Name
-Employee ID
-Email address
-Office number
-
-
-When a user enters those requirements then the user is presented with a menu with the option to:
-
-Add an engineer
-Add an intern
-Finish building the team
-
-
-When a user selects the engineer option then a user is prompted to enter the following and then the user is taken back to the menu:
-
-Engineer's Name
-ID
-Email
-GitHub username
-
-
-When a user selects the intern option then a user is prompted to enter the following and then the user is taken back to the menu:
-
-Intern’s name
-ID
-Email
-School
-
-
-When a user decides to finish building their team then they exit the application, and the HTML is generated.
-
-
-Call the render function (provided for you) and pass in an array containing all employee objects;
-
-The render function will generate and return a block of HTML including templated divs for each employee!
-
-
-Create an HTML file using the HTML returned from the render function.
-
-Write it to a file named team.html in the output folder.
-You can use the provided variable outputPath to target this location
+![Alt text](assets/14-object-oriented-programming-challenge-demo.png)
